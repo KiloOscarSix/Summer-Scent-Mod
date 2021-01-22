@@ -1665,8 +1665,7 @@ label ep2sc6:
     off "Shall I?"
 
     menu:
-        mod "{i}This choice will have unknown consequences."
-        "Come on, I'm not a pervert.":
+        "Come on, I'm not a pervert. [sisLovePath] [sfLovePath] [sisSubPath]":
             off "Let's get out of here."
             hide ep2_sc6_sr_1
             show ep2_sc6_mcr_0
@@ -1680,7 +1679,7 @@ label ep2sc6:
                 off "Probably because she had to buy another cell phone to replace the one that has been stolen in her locker along her shades, now that I think of it."
                 off "What should I do?"
                 menu:
-                    "She told me I don't have to gift her anything.":
+                    "She told me I don't have to gift her anything. [sisLovePath]":
                         off "Well, I'm not sure that I can gift her anything that will make her happy so it probably doesn't matter."
                         off "I'll have to find another way to show that I care for her now."
                     "Let's find some nice shades for my princess.":
@@ -1703,7 +1702,7 @@ label ep2sc6:
             show ep2_sc6_mcr_2
 
 
-        "Sniff it. [gr]\[PantiesSniffed\]" if ep2sfgoneinstead == False:
+        "Sniff it. [hatePath]" if ep2sfgoneinstead == False:
             hide ep2_sc6_sr_1
             show ep2_sc6_sr_2
             $ UnlockThat("ep2/ep2_sc6_sr_2")
@@ -1727,7 +1726,7 @@ label ep2sc6:
                 off "Probably because she got to buy another cell phone to replace the one that has been stolen in her locker along her shades, now that I think of it."
                 off "What should I do?"
                 menu:
-                    "She told me I don't have to gift her anything.":
+                    "She told me I don't have to gift her anything. [sisLovePath]":
                         off "Well, I'm not sure that I can gift her anything that will make her happy so it probably doesn't matter."
                         off "I'll have to find another way to show that I care for her now."
                     "Let's find some nice shades for my princess.":
@@ -1751,7 +1750,7 @@ label ep2sc6:
 
 
 
-        "Sniff it. [assholePath]" if ep2sfgoneinstead == True:
+        "Sniff it. [hatePath]" if ep2sfgoneinstead == True:
             hide ep2_sc6_sr_1
             show ep2_sc6_sr_2
             $ UnlockThat("ep2/ep2_sc6_sr_2")
@@ -1777,7 +1776,7 @@ label ep2sc6:
                         off "Probably because she got to buy another cell phone to replace the one that has been stolen in her locker along her shades, now that I think of it."
                         off "What should I do?"
                         menu:
-                            "She told me I don't have to gift her anything.":
+                            "She told me I don't have to gift her anything. [sisLovePath]":
                                 off "Well, I'm not sure that I can gift her anything that will make her happy so it probably doesn't matter."
                                 off "I'll have to find another way to show that I care for her now."
                             "Let's find some nice shades for my princess.":
@@ -1798,7 +1797,7 @@ label ep2sc6:
                     off "It's no surprise. She'll probably call us every day or so."
                     hide ep2_sc6_mcr_1
                     show ep2_sc6_mcr_2
-                "No one will ever know. [assholePath]":
+                "No one will ever know. [hatePath]":
                     $ ep2pantietaken = True
                     off "I'll bring it back later, once I'm finished with my... research."
                     hide ep2_sc6_sr_2
@@ -1821,7 +1820,7 @@ label ep2sc6:
                             hide ep2_sc6_br_0
                             show ep2_sc6_mcr_0
                             off "I can't believe I stole those panties tho."
-                        "Fuck yes! [assholePath]":
+                        "Fuck yes! [hatePath]":
                             $ ep2cameraset = True
                             off "Alright, I just need to find a place to hide it."
                             off "I want to see what happens in the shower so..."
@@ -2363,17 +2362,17 @@ label ep2sc9:
     sis "I like old movies. There's something about their rhythm that I really find appealing."
     sis "What about you?"
     menu:
-        "Star Wars.":
+        "[gr]Star Wars.":
             mc "I don't think it needs any further explanation."
             sf "I didn't think you were the nerd type."
             mc "Star Wars is not a nerd thing, it's universal."
             sis "Yeah sure..."
-        "Fast and Furious Tokyo Drift.":
+        "[gr]Fast and Furious Tokyo Drift.":
             mc "I don't think it needs any further explanation."
             sis "Actually, it needs a lot. Why this one?"
             mc "Cars, girls, drift."
             sf "No surprise there."
-        "Drink. [gr]\[Drink +1\]":
+        "Drink.":
             $ ep2drinkgamecounter += 1
             if ep1beer == True:
                 scene ep2_sc9_l_mc_beer
@@ -2412,7 +2411,7 @@ label ep2sc9:
     sf "I remember each of those."
     sf "I think I only got really drunk only once, it was not intentional."
     menu:
-        "Not once (Lie).":
+        "Not once (Lie). [hatePath]":
 
             $ ProcessStat(-1, "sf_affection")
             $ ProcessStat(-1, "sis_affection")
@@ -3107,13 +3106,12 @@ label ep2sc10creeproad:
     off "[sis_name] is asleep."
     off "She was probably as drunk as me, maybe even more."
     off "The little princess doesn't look so tough now does she?"
-    $ modSisAbused = "[{}Abused]".format(sis_name)
     menu:
         "Let her sleep.":
             off "I should leave her alone."
             off "I have nothing to do here."
             off "Let's go back to bed."
-        "Play with her. [gr][modSisAbused]" if ep2cameraset == True:
+        "Play with her. [hatePath]" if ep2cameraset == True:
             $ ep2sisabused = True
             off "It's payback time Princess."
             off "I quickly get rid of my underpants and bring out my cock."

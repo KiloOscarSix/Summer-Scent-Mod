@@ -539,13 +539,14 @@ label ep4sc2:
 
             if sis_sub_path == True or sis_love_path == True or sf_love_path == True or sf_dom_path == True:
                 menu:
-                    "Should I text her to cancel?":
+                    mod "This choice has no consequences for now."
+                    "Should I text her to cancel? [gr]\[ShowerCancelQuestion\]":
                         off "I'm not sure I have any interest in meeting her anymore."
                         off "And the girls could misinterpret it."
                         off "I should tell them about that phone call."
                         off "Honesty can't hurt, right?"
                         $ ep4showercancelquestion = True
-                    "That doesn't change anything. [blue]\[Harem Path?\]":
+                    "That doesn't change anything. [gr]\[ShowerMeetingWill\]":
                         off "I'm just going to meet her, not to cheat on..."
                         $ ep4showermeetingwill = True
                         menu:
@@ -4215,6 +4216,7 @@ label ep4sc10:
         off "Better do it on my timing rather than being exposed otherwise."
 
         menu:
+            mod "No known major consequences."
             "Tell them. [gr]\[KellyLateTold\]":
                 $ ep4kflatetold = True
                 mc "However... there is something else I need to tell you."

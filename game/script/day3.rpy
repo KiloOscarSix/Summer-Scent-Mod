@@ -299,7 +299,7 @@ label day3start:
         sis "And I think you forgot the toast."
         sis "There's no more orange juice?"
         menu:
-            "Hey. I did my best ok?":
+            "Hey. I did my best ok? [hatePath]":
                 scene ep3_sc1_k_11_f
                 $ ProcessStat(-1, "sis_affection")
                 $ ProcessStat(-1, "sis_submission")
@@ -2224,7 +2224,7 @@ label ep3sc6:
     mf "Maybe next time."
 
     menu:
-        "Wait. Next time? [gr]\[SteveOk\]":
+        "[gr]Wait. Next time?":
             mc "You're going to send me more and you want me to show them?"
             mf "Why not? If they're interested."
             mf "I have nothing to hide, and their reaction may be fun to observe."
@@ -2308,14 +2308,14 @@ label ep3sc6:
     mf "You're overthinking. I already told you it wasn't good for you."
 
     menu:
-        "I don't think I am. [gr]\[YOLORoad\]":
+        "I don't think I am. [sisLovePath] [sfLovePath]":
             mf "You are. You always are. And that's why you're still a virgin."
             mc "You were a virgin to no so long ago."
             mf "And then I took the YOLO road."
             mf "If you don't try, you can't fail, but you can't succeed either."
             mc "I'll keep that in mind."
             $ ep3yoloroad = True
-        "You may be right.":
+        "You may be right. [sisSubPath]":
             mf "Of course I am. I may be a moron, but I'm a wise one."
             mc "Wise.. isn't the term I would have used."
             mf "You know what I mean."
