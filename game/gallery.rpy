@@ -299,7 +299,7 @@ default galleryDay4 = [
 "ep4/ep4_sc17_lr_46",
 "ep4/ep4_sc17_lr_47",
 "ep4/ep4_sc17_lr_48",
-"ep4/ep4_sc17_lr_48_bis",
+"ep4/ep4_sc17_lr_48_true",
 "ep4/ep4_sc17_lr_49",
 "ep4/ep4_sc17_lr_50",
 "ep4/ep4_sc17_lr_51",
@@ -338,6 +338,8 @@ init python:
 screen gallery():
     tag menu
 
+
+
     if displayedGImage != "":
         imagebutton:
             xalign 0.5
@@ -347,7 +349,6 @@ screen gallery():
     else:
 
         use game_menu("Gallery"):
-
             vpgrid:
                 style_prefix "galm"
                 cols 8
